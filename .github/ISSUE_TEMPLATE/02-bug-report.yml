@@ -1,0 +1,64 @@
+name: Reproducible bug report
+description: Report an observable failure with reproduction and evidence.
+title: "Bug: "
+labels: []
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: What happened, including the exact error or incorrect output?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What contract or documented behavior should apply?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide deterministic steps, inputs, and the smallest command that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Record repository SHA, runtime versions, target, and relevant non-secret configuration.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link logs, checks, screenshots, traces, or fixtures. Remove secrets and sensitive data.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Fix acceptance and validation
+      value: |
+        - [ ] A focused regression check fails before the fix and passes after it.
+        - [ ] Required broader validation passes or baseline failures are classified.
+
+        Commands:
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: relationships
+    attributes:
+      label: Relationships and delivery
+      value: |
+        Parent:
+        Blocked by:
+        Owning repository:
+        Base branch:
+        Publication authority:
+    validations:
+      required: true

@@ -1,0 +1,92 @@
+name: Agent-ready work contract
+description: Define a scoped feature, task, gate, or coordinated delivery item.
+title: ""
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write this issue so a fresh ChatGPT Pro conversation can understand it using only the GitHub connector and the links below.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What will be observably different when this is complete?
+      placeholder: Describe one observable outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and authority
+      description: Why is this needed, and which repository documents or earlier issues are authoritative?
+      placeholder: Include canonical GitHub links.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: State both the included work and plausible adjacent work that must not be added.
+      value: |
+        In scope:
+        -
+
+        Out of scope:
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable, checkable completion criteria.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: List exact commands, runtimes, benchmarks, screenshots, or other evidence required.
+      placeholder: "- `make test`"
+    validations:
+      required: true
+  - type: textarea
+    id: relationships
+    attributes:
+      label: Relationships
+      description: Add the native parent and dependencies in GitHub after creation; list cross-repository or typed links here.
+      value: |
+        Parent:
+        Blocked by:
+        Provides to:
+        Consumes:
+        Related:
+    validations:
+      required: true
+  - type: dropdown
+    id: readiness
+    attributes:
+      label: Readiness
+      description: Select the current prerequisite state. Explain any gap in Context.
+      options:
+        - Ready
+        - Needs decision
+        - Needs specification
+        - Needs reproduction
+        - Needs access
+    validations:
+      required: true
+  - type: textarea
+    id: delivery
+    attributes:
+      label: Delivery boundary
+      value: |
+        Owning repository:
+        Base branch:
+        Expected artifact:
+        Publication authority:
+    validations:
+      required: true
