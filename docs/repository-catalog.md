@@ -2,7 +2,12 @@
 
 This catalog is the organization-level orientation map for the ChatGPT Pro
 GitHub connector. Project membership was read from the live Projects on
-2026-08-20. Repository-local files remain authoritative for implementation.
+2026-08-24. Repository-local files remain authoritative for implementation.
+
+Private repositories and Projects require authenticated GitHub access. Connector
+authorization and indexing are separate requirements and are not implied by
+local `gh` access; rows marked `Repository access required` cannot be oriented
+without access to the corresponding repository.
 
 ## Greenways Infra
 
@@ -32,6 +37,14 @@ Project: https://github.com/orgs/greenways-ai/projects/2
 | [`hardware`](https://github.com/greenways-ai/hardware) | Private Lisp and neural-network hardware work | Repository access required | Needs access and validation map |
 | [`web-infra`](https://github.com/greenways-ai/web-infra) | Private web infrastructure and ledger runtimes | Repository access required | Needs access and validation map |
 | [`agent-flow`](https://github.com/greenways-ai/agent-flow) | Private REPL-first agent workflow kit | Repository access required | Needs access and validation map |
+
+## Greenways Platform
+
+Project: https://github.com/orgs/greenways-ai/projects/4 (private)
+
+| Repository | Responsibility | Connector entry | Validation authority |
+| --- | --- | --- | --- |
+| [`greenways-platform`](https://github.com/greenways-ai/greenways-platform) | Public delivery layer for explicitly released, reviewed Greenways Spaces content; separate from Greenways OS private Fabric and local product authority | Repository access required; `README.md`, `AGENTS.md` | Repository `AGENTS.md`; contract-only validation boundary—no application or infrastructure implementation validation is defined yet |
 
 ## Greenways OS
 
